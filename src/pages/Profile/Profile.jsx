@@ -1,5 +1,6 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import ProfileHeader from "../../components/ProfileHeader";
+import EditUserInfo from "../../components/EditUserInfo";
 import Account from "../../components/Account";
 
 const accounts = [
@@ -24,13 +25,19 @@ const accounts = [
 ];
 
 const Profile = () => {
+	const [inEditMode, setInEditMode] = useState(false);
+
 	useEffect(() => {
 		document.title = "Argent Bank - Profile";
 	}, []);
 
 	return (
 		<main className="main bg-dark">
-			<ProfileHeader />
+			{inEditMode ? (
+				<EditUserInfo onSaved={() => setInEditMode(false)} onCanceled={() => setInEditMode(false)} />
+			) : (
+				<ProfileHeader onEdit={() => setInEditMode(true)} />
+			)}
 
 			<h2 className="sr-only">Accounts</h2>
 			{accounts.map((account) => (

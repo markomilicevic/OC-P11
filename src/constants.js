@@ -7,6 +7,7 @@ export const AUTO_LOGIN_ACTION = { type: AUTO_LOGIN_ACTION_TYPE };
 
 // Notification type
 export const ERROR_NOTIFICATION_TYPE = "error";
+export const SUCCESS_NOTIFICATION_TYPE = "success";
 
 // Default notification expiration in miliseconds
 export const DEFAULT_NOTIFICATION_EXPIRATION_IN_MS = 5000; // 5 seconds

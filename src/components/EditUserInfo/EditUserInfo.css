@@ -1,0 +1,87 @@
+.edit-user-info {
+	color: #fff;
+	margin-bottom: 2rem;
+}
+
+.edit-form {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.edit-row input {
+	width: 100%;
+	padding: 5px;
+}
+
+.edit-actions input,
+.edit-actions button {
+	width: 75px;
+	cursor: pointer;
+}
+
+.edit-row,
+.edit-actions {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+	gap: 10px;
+}
+
+.edit-label,
+.primary-action {
+	display: flex;
+	flex-direction: row;
+}
+
+.edit-field,
+.secondary-action {
+	display: flex;
+	flex-direction: row;
+}
+
+.edit-actions {
+	display: flex;
+	flex-direction: column;
+	padding-top: 20px;
+}
+
+.edit-actions button {
+	width: 100%;
+}
+
+@media (min-width: 720px) {
+	.edit-form {
+		width: 100%;
+	}
+
+	.edit-row,
+	.edit-actions {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		align-items: center;
+	}
+
+	.edit-row input {
+		width: 100px;
+	}
+
+	.edit-label,
+	.primary-action {
+		display: block;
+		text-align: right;
+	}
+
+	.edit-field,
+	.secondary-action {
+		display: block;
+		text-align: left;
+	}
+
+	.edit-actions button {
+		width: auto;
+	}
+}
