@@ -1,0 +1,33 @@
+.notifications {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 999;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.notification {
+	display: inline;
+	padding: 21px;
+	color: white;
+	opacity: 0.9;
+}
+
+.notification:after {
+	content: "✕";
+	padding-left: 15px;
+}
+
+.notification-of-type-error {
+	background-color: #bc0045;
+}
+
+.notification-of-type-success {
+	background-color: #00bc77;
+}

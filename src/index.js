@@ -1,16 +1,24 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Provider } from "react-redux";
 import Page from "./layouts/Page";
+import ProtectedPage from "./layouts/ProtectedPage";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
 import Maintenance from "./pages/Maintenance";
-import { NOT_FOUND_ERROR_TYPE } from "./constants";
+import store from "./utils/store";
+import { AUTO_LOGIN_ACTION, NOT_FOUND_ERROR_TYPE } from "./constants";
 
 const router = createBrowserRouter([
 	{
 		element: <Page />,
+		loader: () => {
+			// Do login when page loaded
+			store.dispatch(AUTO_LOGIN_ACTION);
+			return {};
+		},
 		children: [
 			{
 				path: "/",
@@ -22,7 +30,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "/profile",
-				element: <Profile />,
+				element: (
+					<ProtectedPage>
+						<Profile />
+					</ProtectedPage>
+				),
 			},
 			{
 				path: "*",
@@ -33,7 +45,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>
+	<Provider store={store}>
+		<React.StrictMode>
+			<RouterProvider router={router} />
+		</React.StrictMode>
+	</Provider>
 );
