@@ -5,6 +5,8 @@ import Page from "./layouts/Page";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+import Maintenance from "./pages/Maintenance";
+import { NOT_FOUND_ERROR_TYPE } from "./constants";
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +23,10 @@ const router = createBrowserRouter([
 			{
 				path: "/profile",
 				element: <Profile />,
+			},
+			{
+				path: "*",
+				element: <Maintenance errorType={NOT_FOUND_ERROR_TYPE} />,
 			},
 		],
 	},

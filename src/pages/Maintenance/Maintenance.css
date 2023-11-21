@@ -1,0 +1,19 @@
+.maintenance-page {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	gap: 20px;
+	flex: 1 1;
+	justify-content: center;
+	background-color: #12002b;
+}
+
+.maintenance-message {
+	font-size: 25px;
+	color: white;
+}
+
+.maintenance-recommendation {
+	font-size: 20px;
+	color: white;
+}

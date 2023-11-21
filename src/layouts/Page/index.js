@@ -1,3 +1,3 @@
-import Page from "./Page.jsx";
+import Page from "./Page";
 
 export default Page;
