@@ -13,7 +13,7 @@ const ProfileHeader = ({ onEdit }) => {
 				<br />
 				{firstName} {lastName}!
 			</h1>
-			<Button onClick={() => {}}>Edit Name</Button>
+			<Button onClick={() => onEdit()}>Edit Name</Button>
 		</div>
 	);
 };

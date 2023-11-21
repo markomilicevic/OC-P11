@@ -2,8 +2,8 @@ import "./Button.css";
 
 const Button = ({ isLarge = false, onClick, children }) => (
 	<button
-		onClick={() => {
-			onClick();
+		onClick={(event) => {
+			onClick(event);
 		}}
 		className={isLarge ? "large-button" : "button"}
 	>
