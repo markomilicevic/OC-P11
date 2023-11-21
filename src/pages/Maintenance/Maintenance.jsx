@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { NOT_FOUND_ERROR_TYPE } from "../../constants";
+import { NOT_FOUND_ERROR_TYPE, UNAUTHORIZED_ERROR_TYPE } from "../../constants";
 import "./Maintenance.css";
 
 const Maintenance = ({ errorType }) => {
 	const ERROR_MESSAGE_MAP = {
 		[NOT_FOUND_ERROR_TYPE]: "Sorry, this page didn't exist",
+		[UNAUTHORIZED_ERROR_TYPE]: "Please signin prior to access this page",
 	};
 	const errorMessage = ERROR_MESSAGE_MAP[errorType] || "An internal error occured";
 
