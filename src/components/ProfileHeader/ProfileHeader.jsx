@@ -8,11 +8,11 @@ const ProfileHeader = ({ onEdit }) => {
 
 	return (
 		<div className="header">
-			<h1>
+			<h2>
 				Welcome back
 				<br />
 				{firstName} {lastName}!
-			</h1>
+			</h2>
 			<Button onClick={() => onEdit()}>Edit Name</Button>
 		</div>
 	);

@@ -83,7 +83,7 @@ const EditUserInfo = ({ onSaved, onCanceled }) => {
 
 	return (
 		<div className="edit-user-info">
-			<h1>Edit user info</h1>
+			<h2>Edit user info</h2>
 			<form onSubmit={handleSubmit} className="edit-form" action="." method="POST">
 				<div className="edit-row">
 					<label className="edit-label" htmlFor="new-username">
