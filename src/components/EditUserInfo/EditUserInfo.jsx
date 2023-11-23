@@ -36,7 +36,6 @@ const EditUserInfo = ({ onSaved, onCanceled }) => {
 
 			// Update the username trough the API
 			const response = await fetch(`${API_BASE_URL}/user/profile`, {
-				// NOTE: The GET method is more appropriate here, ideally ask the Backend to change it
 				method: "PUT",
 				headers: {
 					Authorization: `Bearer ${token}`,
