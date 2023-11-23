@@ -3,6 +3,10 @@
 	margin-bottom: 2rem;
 }
 
+.header h2 {
+	font-size: 2em;
+}
+
 .edit-button {
 	border-color: #00bc77;
 	background-color: #00bc77;

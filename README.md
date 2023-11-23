@@ -17,6 +17,7 @@ Here is the P11 exercise of the Web Integrator course at OpenClassrooms
 - GitHub social coded using **Issues** and **Merge Requests** features ([GitHub](https://github.com/))
 - Multi-screen [React](https://react.dev/) application
 - React Redux & [Redux Toolkit](https://redux-toolkit.js.org/) state managed
+- HTML5 valid ([W3C Markup Validation Service](https://validator.w3.org/))
 
 ## Usage
 

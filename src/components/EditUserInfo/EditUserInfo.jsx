@@ -36,7 +36,6 @@ const EditUserInfo = ({ onSaved, onCanceled }) => {
 
 			// Update the username trough the API
 			const response = await fetch(`${API_BASE_URL}/user/profile`, {
-				// NOTE: The GET method is more appropriate here, ideally ask the Backend to change it
 				method: "PUT",
 				headers: {
 					Authorization: `Bearer ${token}`,
@@ -84,7 +83,7 @@ const EditUserInfo = ({ onSaved, onCanceled }) => {
 
 	return (
 		<div className="edit-user-info">
-			<h1>Edit user info</h1>
+			<h2>Edit user info</h2>
 			<form onSubmit={handleSubmit} className="edit-form" action="." method="POST">
 				<div className="edit-row">
 					<label className="edit-label" htmlFor="new-username">
